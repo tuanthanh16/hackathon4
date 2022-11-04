@@ -44,7 +44,7 @@ export default function FlightsDestination(props) {
         <label htmlFor="direct">Direct Flight</label>
       </div>
 
-      {console.log(props.flights)}
+      {/* {console.log(props.flights)} */}
     </>
   );
 }
