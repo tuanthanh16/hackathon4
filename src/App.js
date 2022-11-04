@@ -48,6 +48,9 @@ function App() {
 
 
       <div className="App">
+
+        <h1>Super duper fun</h1>
+
         <FlightsDestination
           flights={data}
           setFrom={setFlyFrom}
@@ -60,7 +63,7 @@ function App() {
         {!isLoading &&
           data.length > 0 ?
           data.map((item, index) => <FlightItem key={index} data={item} />) :
-          <p>There is no flights between these destinations</p>}
+          <p>There is no flights available</p>}
       </div>
     </>
   );

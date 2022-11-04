@@ -4,6 +4,7 @@
 
 body {
   background-image: url(/src/images/plane-7432680_1920.jpg);
+
   width: 100%;
   margin: 0;
   color: #ffffff;
@@ -18,18 +19,23 @@ body {
 
 }
 
-.custom-select {
+.search-content {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: -4em;
   display: flex;
   flex-direction: row;
 }
 
 .departure,
-.destination {
+.destination,
+.direct-flight {
 
-  width: 50%;
-  margin: 1em 4em;
+  width: 20%;
+  margin: 1em 1em;
+}
+
+.direct-flight {
+  margin: 6.3em -5em;
 
 }
 
