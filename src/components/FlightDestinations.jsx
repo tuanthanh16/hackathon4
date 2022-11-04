@@ -3,7 +3,7 @@ export default function FlightsDestination(props) {
     <div className="search-content">
       <div className="departure">
         <h2>Departures:</h2>
-        <select
+        <select className="select"
           onChange={(e) => {
             props.setFrom(e.target.value);
           }}
@@ -19,7 +19,7 @@ export default function FlightsDestination(props) {
 
       <div className="destination">
         <h2>Destinations:</h2>
-        <select
+        <select className="select"
           onChange={(e) => {
             props.setTo(e.target.value);
           }}

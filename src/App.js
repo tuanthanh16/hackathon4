@@ -49,7 +49,7 @@ function App() {
 
       <div className="App">
 
-        <h1>Super duper fun</h1>
+        <h1>Super duper flight</h1>
 
         <FlightsDestination
           flights={data}
