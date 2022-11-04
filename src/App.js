@@ -7,6 +7,8 @@ import FlightItem from "./components/FlightItem";
 
 import FlightsDestination from "./components/FlightDestinations";
 
+import Header from "./components/Header";
+
 function App() {
   const [flyFrom, setFlyFrom] = useState('PRG')
 
@@ -48,6 +50,8 @@ function App() {
 
   return (
     <>  <div className="App">
+
+      <Header />
 
       <FlightsDestination flights={data} setFrom={setFlyFrom} setTo={setFlyTo} />
 

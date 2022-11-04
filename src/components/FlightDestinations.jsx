@@ -5,11 +5,11 @@ export default function FlightsDestination(props) {
 
 
     return (
-        <>
+        
 
-
+        <div className="custom-select">
             <div className='departure'>
-                <h1>Departures:</h1>
+                <h3>Departures:</h3>
                 <select onChange={(e) => {
                     props.setFrom(e.target.value)
 
@@ -21,10 +21,11 @@ export default function FlightsDestination(props) {
                 </select>
 
             </div>
+            
 
 
             <div className='destination'>
-                <h1>Destinations:</h1>
+                <h3>Destinations:</h3>
                 <select onChange={(e) => {
                     props.setTo(e.target.value)
 
@@ -37,12 +38,11 @@ export default function FlightsDestination(props) {
                 </select>
 
             </div >
-
-            {
-                console.log(props.flights)
-            }
+            
+        </div>
 
 
-        </>
+
+        
     )
 }
