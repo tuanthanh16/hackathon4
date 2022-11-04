@@ -5,10 +5,16 @@ import "./App.css";
 import FlightItem from "./components/FlightItem";
 import Layout from "./components/Layout";
 
+
+import FlightsDestination from "./components/FlightDestinations";
+
 function App() {
+  const [flyFrom, setFlyFrom] = useState('PRG')
+
+  const [flyTo, setFlyTo] = useState('VLC')
+
+
   const API_key = "data4youcbp202106";
-  const flyFrom = "PRG";
-  const flyTo = "VLC";
   const limit = 5;
   const depart_after = "2022-11-06T00:00";
   const sort = "date";
@@ -29,14 +35,20 @@ function App() {
 
   useEffect(() => {
     FetchData();
-  }, []);
+  }, [flyFrom, flyTo]);
 
   let isLoading = true;
   if (data) {
     isLoading = false;
   }
 
+
+
+
+
+
   return (
+<<<<<<< HEAD
     <Layout>
       <div className="App">
         {isLoading && <p>Is Loading</p>}
@@ -45,6 +57,20 @@ function App() {
           data.map((item, index) => <FlightItem key={index} data={item} />)}
       </div>
     </Layout>
+=======
+    <>  <div className="App">
+
+      <FlightsDestination flights={data} setFrom={setFlyFrom} setTo={setFlyTo} />
+
+      {isLoading && <p>Is Loading</p>}
+
+      {!isLoading &&
+        data.map((item, index) => <FlightItem key={index} data={item} />)}
+    </div>
+
+
+    </>
+>>>>>>> master
   );
 }
 
