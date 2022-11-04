@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 import FlightItem from "./components/FlightItem";
+import Layout from "./components/Layout";
 
 function App() {
   const API_key = "data4youcbp202106";
@@ -36,12 +37,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      {isLoading && <p>Is Loading</p>}
+    <Layout>
+      <div className="App">
+        {isLoading && <p>Is Loading</p>}
 
-      {!isLoading &&
-        data.map((item, index) => <FlightItem key={index} data={item} />)}
-    </div>
+        {!isLoading &&
+          data.map((item, index) => <FlightItem key={index} data={item} />)}
+      </div>
+    </Layout>
   );
 }
 

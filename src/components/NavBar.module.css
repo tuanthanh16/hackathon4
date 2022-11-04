@@ -1,0 +1,25 @@
+.nav {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 600px;
+}
+
+.img img {
+  width: 50px;
+  margin-left: 1rem;
+}
