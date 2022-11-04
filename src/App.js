@@ -43,6 +43,7 @@ function App() {
 
   return (
     <>
+
       <div className="App">
         <FlightsDestination
           flights={data}
@@ -54,7 +55,9 @@ function App() {
         {isLoading && <p>Is Loading</p>}
 
         {!isLoading &&
-          data.map((item, index) => <FlightItem key={index} data={item} />)}
+          data.length > 0 ?
+          data.map((item, index) => <FlightItem key={index} data={item} />) :
+          <p>There is no flights between these destatinations</p>}
       </div>
     </>
   );
