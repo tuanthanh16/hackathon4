@@ -3,11 +3,11 @@
 }
 
 body {
-  background-image: url(/src/images/plane-7432680_1920.jpg);
+  background-image: url(/src/images/balloons-1046658_1920.jpg);
   width: 100%;
   margin: 0;
   color: #ffffff;
-  font: 400 .9em/1.9 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+  font: 400 .9em/1.9 'Calibri', Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -18,24 +18,42 @@ body {
 
 }
 
-.custom-select {
+.select {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #999;
+  font-size: 15px;
+  color: #1c87c9;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 4px 4px #ccc;
+}
+
+.search-content {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: -4em;
+  margin-left: 150px;
   display: flex;
   flex-direction: row;
 }
 
 .departure,
-.destination {
+.destination,
+.direct-flight {
 
-  width: 50%;
-  margin: 1em 4em;
+  width: 20%;
+  margin: 1em 1em;
+}
+
+.direct-flight {
+  margin: 6.3em -5em;
 
 }
 
 .flight-item {
+
   width: 60%;
-  height: 180px;
+  height: 200px;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 5%;
@@ -49,5 +67,6 @@ body {
 
 
 p {
-  /* margin-left: 50px; */
+  color: #1c87c9;
+  font-size: 15px;
 }

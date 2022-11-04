@@ -1,9 +1,10 @@
 export default function FlightsDestination(props) {
   return (
-    <>
+    <div className="search-content">
       <div className="departure">
-        <h1>Departures:</h1>
+        <h2>Departures:</h2>
         <select
+          className="select"
           onChange={(e) => {
             props.setFrom(e.target.value);
           }}
@@ -18,8 +19,9 @@ export default function FlightsDestination(props) {
       </div>
 
       <div className="destination">
-        <h1>Destinations:</h1>
+        <h2>Destinations:</h2>
         <select
+          className="select"
           onChange={(e) => {
             props.setTo(e.target.value);
           }}
@@ -45,6 +47,6 @@ export default function FlightsDestination(props) {
       </div>
 
       {/* {console.log(props.flights)} */}
-    </>
+    </div>
   );
 }

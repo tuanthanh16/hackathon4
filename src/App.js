@@ -69,15 +69,14 @@ function App() {
   return (
     <>
       <div className="App">
+        <h1>Super duper flight</h1>
         <FlightsDestination
           flights={data}
           setFrom={setFlyFrom}
           setTo={setFlyTo}
           setDirect={setDirectFlight}
         />
-
         {isLoading && <p>Is Loading</p>}
-
         {!isLoading &&
           pageData.length > 0 &&
           pageData.map((item, index) => <FlightItem key={index} data={item} />)}
