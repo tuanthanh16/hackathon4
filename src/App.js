@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+import "./App.css";
+
+import FlightItem from "./components/FlightItem";
 
 function App() {
+  const API_key = "data4youcbp202106";
+  const flyFrom = "PRG";
+  const flyTo = "VLC";
+  const limit = 5;
+  const depart_after = "2022-11-06T00:00";
+  const sort = "date";
+
+  const url = `https://api.skypicker.com/flights?fly_from=${flyFrom}&fly_to=${flyTo}&limit=${limit}&partner=${API_key}`;
+
+  const [data, setData] = useState([]);
+  const FetchData = async () => {
+    const response = await fetch(url);
+    if (response.ok) {
+      const results = await response.json();
+
+      setData(results.data);
+    } else {
+      console.log("fetching failed");
+    }
+  };
+
+  useEffect(() => {
+    FetchData();
+  }, []);
+
+  let isLoading = true;
+  if (data) {
+    isLoading = false;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLoading && <p>Is Loading</p>}
+
+      {!isLoading &&
+        data.map((item, index) => <FlightItem key={index} data={item} />)}
     </div>
   );
 }

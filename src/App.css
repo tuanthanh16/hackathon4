@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.flight-item {
+  border: solid 1px #444;
+}
+.title {
+  font-style: italic;
+}
+.price {
+  font-weight: 700;
+}
