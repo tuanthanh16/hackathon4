@@ -7,7 +7,7 @@ body {
   width: 100%;
   margin: 0;
   color: #ffffff;
-  font: 400 .9em/1.9 'Calibri', Helvetica, Arial, sans-serif;
+  font: 400 0.9em/1.9 "Calibri", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
@@ -15,7 +15,6 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100vh;
-
 }
 
 .select {
@@ -24,49 +23,51 @@ body {
   border: 1px solid #999;
   font-size: 15px;
   color: #1c87c9;
-  background-color: #eee;
+  /* background-color: #eee; */
   border-radius: 5px;
-  box-shadow: 4px 4px #ccc;
+  /* box-shadow: 4px 4px #ccc; */
 }
 
 .search-content {
   display: flex;
-  margin-bottom: -4em;
-  margin-left: 150px;
-  display: flex;
   flex-direction: row;
+  background-color: #999;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
 }
 
 .departure,
 .destination,
 .direct-flight {
-
-  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
   margin: 1em 1em;
 }
 
 .direct-flight {
-  margin: 6.3em -5em;
-
+  margin: 10px;
 }
 
 .flight-item {
-
   width: 60%;
   height: 200px;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 5%;
-  background: #ECEFF1;
+  background: #eceff1;
   box-shadow: 10px 10px rgb(0 0 0 / 20%);
 
   border-radius: 50px;
   color: black;
 }
 
-
-
 p {
+  margin: 0;
   color: #1c87c9;
   font-size: 15px;
 }

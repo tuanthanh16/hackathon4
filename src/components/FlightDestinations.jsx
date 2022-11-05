@@ -2,7 +2,7 @@ export default function FlightsDestination(props) {
   return (
     <div className="search-content">
       <div className="departure">
-        <h2>Departures:</h2>
+        <p>Departures:</p>
         <select
           className="select"
           onChange={(e) => {
@@ -19,7 +19,7 @@ export default function FlightsDestination(props) {
       </div>
 
       <div className="destination">
-        <h2>Destinations:</h2>
+        <p>Destinations:</p>
         <select
           className="select"
           onChange={(e) => {

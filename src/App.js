@@ -61,21 +61,20 @@ function App() {
     // console.log(`clicked ${page}`);
     setPage(page);
     setDisplayData(page);
-    // const startIndex = (page - 1) * 5;
-    // const endIndex = startIndex + 5;
-    // pageData = data.slice(startIndex, endIndex);
-    // console.log(pageData);
   };
   return (
     <>
       <div className="App">
+        {/* <Header /> */}
         <h1>Super duper flight</h1>
+
         <FlightsDestination
           flights={data}
           setFrom={setFlyFrom}
           setTo={setFlyTo}
           setDirect={setDirectFlight}
         />
+
         {isLoading && <p>Is Loading</p>}
         {!isLoading &&
           pageData.length > 0 &&
