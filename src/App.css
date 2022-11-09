@@ -12,6 +12,8 @@ body {
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   width: 100%;
   min-height: 100vh;
@@ -33,9 +35,8 @@ body {
   flex-direction: row;
   background-color: #999;
   align-items: center;
-  margin-bottom: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0;
+  margin-left: 5rem;
   border-radius: 5px;
 }
 
@@ -53,7 +54,7 @@ body {
   margin: 10px;
 }
 
-.flight-item {
+/* .flight-item {
   width: 60%;
   height: 200px;
   margin-left: 20%;
@@ -64,10 +65,63 @@ body {
 
   border-radius: 50px;
   color: black;
-}
+} */
 
 p {
   margin: 0;
+  padding: 0;
   color: #1c87c9;
   font-size: 15px;
+}
+
+.flight-board {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flight-board .flight-item {
+  margin: 10px;
+  max-width: 15rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.flight-item p {
+  font-style: italic;
+  color: #999;
+}
+
+.flight-title {
+  color: red;
+  font-style: italic;
+}
+
+.top-header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.top-header h1 {
+  margin: 0;
+  /* margin-left: 5rem; */
+  padding: 0;
+}
+
+.footer {
+  height: 10vh;
+  margin-top: 20px;
+  background-color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
 }
